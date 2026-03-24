@@ -67,6 +67,18 @@ h1, h2, h3, h4, h5, h6 {
 .bg-secondary { background-color: var(--secondary); }
 .opacity-80 { opacity: 0.8; }
 .opacity-60 { opacity: 0.6; }
+.p-8 { padding: 32px; }
+.radius-lg { border-radius: var(--radius-lg); }
+.border-primary { border-top: 4px solid var(--primary); }
+.text-primary { color: var(--primary) !important; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.mb-0 { margin-bottom: 0 !important; }
+.font-normal { font-weight: 400; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-2 { gap: 8px; }
+.pill { display: inline-block; padding: 6px 14px; background: rgba(37,99,235,0.08); color: var(--text-main); border-radius: var(--radius-pill); font-size: 13px; font-weight: 600; border: 1px solid rgba(37,99,235,0.15); }
 .mt-4 { margin-top: 16px; }
 .mt-6 { margin-top: 24px; }
 .mt-8 { margin-top: 32px; }

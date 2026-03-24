@@ -150,6 +150,18 @@
     animation-delay: 2s;
 }
 
+.top-left {
+    top: 30px;
+    left: -20px;
+    animation-delay: 1s;
+}
+
+.bottom-right {
+    bottom: 40px;
+    right: -20px;
+    animation-delay: 3s;
+}
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
@@ -187,8 +199,8 @@
 /* Expertise Section */
 .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
 .service-card {
@@ -263,6 +275,118 @@
     gap: 16px;
 }
 
+/* Domains Section */
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.domain-card {
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+}
+
+.domain-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.domain-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.domain-icon {
+    font-size: 32px;
+    background: rgba(37, 99, 235, 0.1);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+}
+
+.domain-header h3 {
+    font-size: 20px;
+}
+
+.domain-list li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.domain-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Qualifications Section */
+.qualifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.qualification-card {
+    padding: 40px;
+}
+
+.qualification-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.qualification-icon {
+    font-size: 40px;
+}
+
+.qualification-header h3 {
+    font-size: 24px;
+}
+
+.qualification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.qualification-list li {
+    background: rgba(37, 99, 235, 0.03);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--primary);
+    transition: var(--transition);
+}
+
+.qualification-list li:hover {
+    transform: translateX(4px);
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.qualification-list .block {
+    display: block;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero-content, .about-content {
@@ -271,6 +395,12 @@
         gap: 40px;
     }
     .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .qualifications-grid {
+        grid-template-columns: 1fr;
+    }
+    .domains-grid {
         grid-template-columns: 1fr;
     }
     .hero-subtitle {
@@ -291,6 +421,9 @@
 }
 @media (max-width: 768px) {
     .section-title { font-size: 32px; }
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Timeline (Experience) */

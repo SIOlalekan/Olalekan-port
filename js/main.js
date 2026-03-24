@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure the page starts at the top on every load/refresh
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     // Mobile navigation toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -33,6 +39,44 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.background = 'var(--surface-glass)';
         }
     });
+
+    // Resume Modal Logic
+    const viewResumeBtn = document.getElementById('viewResumeBtn');
+    const resumeModal = document.getElementById('resumeModal');
+    const closeModal = document.getElementById('closeModal');
+
+    if (viewResumeBtn && resumeModal) {
+        viewResumeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            resumeModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeFunc = () => {
+            resumeModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        if (closeModal) closeModal.addEventListener('click', closeFunc);
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
+                closeFunc();
+            }
+        });
+
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                closeFunc();
+            }
+        });
+
+        // Discourage right-click on the modal area
+        resumeModal.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            return false;
+        });
+    }
 
     // Intersection Observer for Scroll Animations
     const observerOptions = {
