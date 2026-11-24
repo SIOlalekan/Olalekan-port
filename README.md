@@ -1,4 +1,4 @@
-# Sodeeq Ipadeola Olalekan — Professional Portfolio (Revision 3)
+# Sodeeq Ipadeola Olalekan — Professional Portfolio (Revision 4)
 
 **Static HTML/CSS/JavaScript portfolio** for Netlify continuous deployment from `SIOlalekan/Olalekan-port`.
 
@@ -23,7 +23,7 @@ Premium deep navy `#0B1C26`, soft mint `#A9E8D1`, warm ivory `#F5F2EB`, cream `#
 
 - **SpringTrust:** under development; an existing control-and-assessment foundation and a broader proposed AI-enabled SaaS roadmap are clearly separated.
 - **GrantMo:** **pilot stage**, not pre-pilot or claimed market-wide adoption.
-- **GMBTE:** Head of Digital Trust, Policy & Compliance through **12 Nov 2026**. Do not claim the organisation holds ISO certification from an ISMS pack.
+- **GMBTE:** Head of Digital Trust, Policy & Compliance through **Nov 2026**. Do not claim the organisation holds ISO certification from an ISMS pack.
 - **Inegben capstone:** user led capstone. Client identifying details, risk findings and internal expenditure estimates intentionally withheld because the underlying report was marked confidential and subject to an NDA.
 - **ISACA CCS review:** completed; **ISACA Foundation scholarship review:** selected only; **ISC2 AI Security pilot:** selected with exam pending.
 - **Qualifications:** include user-confirmed ISO/IEC 27001 Lead Implementer and ISO/IEC 27701 Lead Auditor, with missing issuer/date links clearly unfilled.
@@ -42,3 +42,12 @@ The source documents, private emails, capstone report, and confidential screensh
 ## Deployment preview — important
 
 Read `DEPLOY-PREVIEW.md`. **Do not merge to `main` until you have reviewed Netlify's updated Deploy Preview**.
+
+## Revision 4 — factual corrections (24 November 2026)
+
+- The homepage career timeline lists five distinct roles, including British Council and INHAF separately, with the exact user-confirmed dates; overlapping dates are intentional.
+- Removed the Westmidlands years from the About narrative only; dates remain on the formal Experience page.
+- The MA institution is University of Greater Manchester. MA specialism has been omitted as requested.
+- Experience identifies Westmidlands CBT, University of Ibadan.
+
+Keep this package on the existing `portfolio-redesign-preview` branch, review the Netlify Deploy Preview, and do not merge into `main` until approved.
