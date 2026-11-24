@@ -1,27 +1,17 @@
-# Deploy preview checklist
+# Updating your existing Netlify Deploy Preview (do not merge yet)
 
-## Option A — GitHub Desktop (Windows-friendly)
-1. Open GitHub Desktop and clone `SIOlalekan/Olalekan-port` if not already cloned.
-2. Go to **Current Branch → New Branch** and name it `portfolio-redesign-preview`; create it from `main`.
-3. Extract this ZIP. Copy its **contents**, including `index.html`, `about.html`, `projects.html`, `research.html`, folders and `netlify.toml`, into the local repository folder. Do not delete the hidden `.git` folder.
-4. Review changed files in GitHub Desktop, enter summary `Premium navy and mint portfolio redesign`, then click **Commit to portfolio-redesign-preview**.
-5. Click **Publish branch**.
-6. On GitHub, click **Compare & pull request**; open the PR against `main`. Do not click **Merge** yet.
-7. Look under PR **Checks** or **Deploy Preview** for Netlify's preview URL. If absent, review deploy-preview settings on Netlify.
-8. Check mobile, tablet, desktop, links, publication author order, project stages, image crop, and contact details before approving a merge.
+Your correct GitHub repository is **SIOlalekan/Olalekan-port**. The existing open pull request compares `portfolio-redesign-preview` into `main` and already has a working Netlify Deploy Preview.
 
-## Option B — Git CLI
-```bash
-git clone https://github.com/SIOlalekan/Olalekan-port.git
-cd Olalekan-port
-git switch -c portfolio-redesign-preview
-# Copy contents of the extracted portfolio ZIP into this folder.
-git status
-git add -A
-git commit -m "Premium navy and mint portfolio redesign"
-git push -u origin portfolio-redesign-preview
-```
-Open a PR from `portfolio-redesign-preview` into `main`. Netlify preview is conditional on project integration and previews being enabled.
+1. Open **GitHub Desktop** and choose repository **Olalekan-port** (not Olalekan-portfolio).
+2. Confirm **Current branch** is `portfolio-redesign-preview`.
+3. Select **Repository → Show in Explorer** to open the correct local GitHub folder.
+4. Extract this ZIP and **copy all its contents** into that repository folder. Choose **Replace** for same-named files. Keep `.git` and unrelated files; do not nest this ZIP inside a new folder.
+5. Go back to GitHub Desktop → **Changes**. Check that `index.html`, `about.html`, `projects.html`, `research.html`, `certifications.html`, `experience.html`, `speaking.html`, `contact.html`, `styles/redesign.css`, `js/redesign.js` and both images are present. New files may be shown with a green plus.
+6. Commit on `portfolio-redesign-preview`, e.g. `Refine professional portfolio content and visual design`.
+7. Click **Push origin** (or **Publish branch** only if the branch is not yet published). **Do not merge your pull request.**
+8. Return to the **existing pull request**. Netlify normally rebuilds its **same Deploy Preview URL** with every new pushed commit, after checks finish. Open that preview and inspect pages on desktop and phone.
+9. Verify public wording, career dates, photos, research links, certification details and mailto speaking enquiry. If happy, merge separately when you decide to make the redesign public.
 
-## Important
-No code has been pushed by ChatGPT. This package is not itself an active Netlify preview. Your live site remains unchanged until a production publish or PR merge. Do not replace or upload the ZIP as-is to the root of the repository; extract and copy its contents.
+**Safety:** You are working from a separate preview branch, so the current public `main` site is not overwritten by these file-copy steps. Do not change the Netlify production-branch setting.
+
+**Limits:** Automated structure/link checks and browser screenshots have been completed locally. This is a review package and is not yet deployed to your actual GitHub repository or live Netlify site.

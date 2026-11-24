@@ -1,38 +1,44 @@
-# Sodeeq Olalekan — Premium Digital Trust Portfolio
+# Sodeeq Ipadeola Olalekan — Professional Portfolio (Revision 3)
 
-A responsive, static portfolio site in a premium navy-and-mint style. Based on the owner's existing `Olalekan-port` repository, with redesigned pages and local assets.
+**Static HTML/CSS/JavaScript portfolio** for Netlify continuous deployment from `SIOlalekan/Olalekan-port`.
 
 ## Pages
-- `index.html` — home and featured work
-- `about.html` — biography and career story
-- `projects.html` — SpringTrust, GrantMo and public GRC work
-- `core-competencies.html` — expertise and practical skills
-- `research.html` — research, ISACA expert review and speaking
-- `contact.html` — email, LinkedIn and GitHub
 
-## Local preview
-Run `python -m http.server 8080` from this folder, then visit `http://localhost:8080`. No Node.js/build/install step is required.
+- `index.html` — professional homepage and selected work
+- `about.html` — human-centred professional story
+- `experience.html` — role-by-role experience timeline
+- `projects.html` — SpringTrust, GrantMo, GMBTE ISMS, Inegben capstone, public GRC portfolio
+- `core-competencies.html` — five professional expertise areas and applied case studies
+- `research.html` — publications, professional service, speaking and media
+- `certifications.html` — certifications, specialist learning, academic education
+- `speaking.html` — event invitation page with pre-filled email enquiry
+- `contact.html` — professional contact, photograph, eight collaboration topics
+- `404.html` — fallback page
 
-## Important evidence and publishing checks
-- The first journal paper is first-authored; the financial reporting paper lists Sodeeq second, as confirmed by their journal author lists.
-- SpringTrust is in development and is described as the successor name to TrustReady; this portfolio does **not** claim that its trademark is registered or that it has production clients.
-- GrantMo is described as MVP/pre-pilot, without invented revenue or usage metrics.
-- The public GitHub profile is linked; a precise GRC repository URL should be added after it is confirmed.
-- Professional accreditation badges and older numerical impact claims have not been added without documentation.
-- The outdated `assets/olalekan_resume.pdf` is intentionally **excluded from the new published site**, so it is not accidentally made available at a direct URL. Retain an original backup in your old repository or the earlier portfolio ZIP and prepare a replacement résumé before adding a download button.
-- Contact email and LinkedIn are carried over from the owner's existing portfolio files. Confirm continued preference before publishing.
-- The site contains no form processor and no embedded analytics. Google-hosted fonts are loaded when available; system fonts work offline.
+## Design
 
-## How to preview using a GitHub pull request and Netlify
-1. Keep the existing `main` branch untouched.
-2. In a local clone of `https://github.com/SIOlalekan/Olalekan-port`, create `portfolio-redesign-preview` using `git switch -c portfolio-redesign-preview`.
-3. Copy **the contents** of this folder into the repo's root; retain the `.git` directory. Review `git status` and changed files.
-4. Run `git add -A && git commit -m "Redesign all portfolio pages in navy and mint" && git push -u origin portfolio-redesign-preview`.
-5. Open a pull request from `portfolio-redesign-preview` to `main`, **do not merge it yet**.
-6. If Netlify Deploy Previews are enabled for the site and GitHub is connected, Netlify should add a deploy preview link to the PR checks. Review the preview on mobile and desktop.
-7. After checking content, links, spelling, accessibility and the Netlify preview, merge the PR to update production.
+Premium deep navy `#0B1C26`, soft mint `#A9E8D1`, warm ivory `#F5F2EB`, cream `#ECF0ED`. Uses supplied professional portraits. No image generation, stock portrait or invented professional photograph in the actual website. Responsive navigation, reduced-motion support, semantic HTML and keyboard-accessible links.
 
-If no preview appears, check Netlify **Project configuration → Build & deploy → Continuous deployment → Deploy contexts** and verify that Deploy Previews are enabled. Names may vary slightly by Netlify UI version.
+## Project stages and evidence integrity
 
-## Tech
-Plain HTML5, CSS3, small vanilla JavaScript. All pages use shared `styles/redesign.css` and `js/redesign.js`. `netlify.toml` sets the publish directory to the repository root; confirm this matches the current Netlify site's settings. No back-end or credentials included.
+- **SpringTrust:** under development; an existing control-and-assessment foundation and a broader proposed AI-enabled SaaS roadmap are clearly separated.
+- **GrantMo:** **pilot stage**, not pre-pilot or claimed market-wide adoption.
+- **GMBTE:** Head of Digital Trust, Policy & Compliance through **12 Nov 2026**. Do not claim the organisation holds ISO certification from an ISMS pack.
+- **Inegben capstone:** user led capstone. Client identifying details, risk findings and internal expenditure estimates intentionally withheld because the underlying report was marked confidential and subject to an NDA.
+- **ISACA CCS review:** completed; **ISACA Foundation scholarship review:** selected only; **ISC2 AI Security pilot:** selected with exam pending.
+- **Qualifications:** include user-confirmed ISO/IEC 27001 Lead Implementer and ISO/IEC 27701 Lead Auditor, with missing issuer/date links clearly unfilled.
+- **Research:** first author of the RJIT paper, second author of the JAIET paper.
+
+## Where content is based on evidence
+
+- User-supplied professional CV and clarification messages for role titles, dates and academic qualifications.
+- SYBTE event organiser post for the Sheffield training acknowledgment.
+- Inegben Academy podcast public recording; two DOI-linked articles.
+- User-supplied CyberExam certificate for exam title, date and score.
+- User-supplied ISACA scholarship selection and ISC2 pilot-selection correspondence for status distinctions.
+
+The source documents, private emails, capstone report, and confidential screenshots **are intentionally not included** in this public ZIP.
+
+## Deployment preview — important
+
+Read `DEPLOY-PREVIEW.md`. **Do not merge to `main` until you have reviewed Netlify's updated Deploy Preview**.
