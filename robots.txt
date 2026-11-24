@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://olalekancybersoldiergrc.netlify.app/sitemap.xml
